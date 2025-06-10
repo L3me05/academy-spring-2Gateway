@@ -21,3 +21,7 @@ spring:
               uri: http://localhost:8081
               predicates:
                 - Path=/corsi/**
+app:
+  security:
+    username: ${GATEWAY_USERNAME:user}
+    password: ${GATEWAY_PASSWORD:password}
