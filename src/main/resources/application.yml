@@ -1,0 +1,23 @@
+server:
+  port: 8085
+
+spring:
+  application:
+    name: academy-spring-2Gateway
+  cloud:
+    gateway:
+      server:
+        webmvc:
+          routes:
+            - id: DOCENTI
+              uri: http://localhost:8080
+              predicates:
+                - Path=/docenti/**
+            - id: DISCENTI
+              uri: http://localhost:8080
+              predicates:
+                - Path=/discenti/**
+            - id: CORSI
+              uri: http://localhost:8081
+              predicates:
+                - Path=/corsi/**
