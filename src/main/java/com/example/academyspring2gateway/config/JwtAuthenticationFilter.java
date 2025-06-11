@@ -1,4 +1,4 @@
-package com.example.academyspring2gateway.filter;
+package com.example.academyspring2gateway.config;
 
 import com.example.academyspring2gateway.util.JwtUtil;
 import jakarta.servlet.FilterChain;
@@ -16,7 +16,7 @@ import org.springframework.web.filter.OncePerRequestFilter;
 
 import java.io.IOException;
 
-@Component  // ✅ Aggiunto @Component
+@Component
 public class JwtAuthenticationFilter extends OncePerRequestFilter {
 
     private final JwtUtil jwtUtil;

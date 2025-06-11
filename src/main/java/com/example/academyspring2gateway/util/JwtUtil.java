@@ -58,10 +58,10 @@ public class JwtUtil {
         return createToken(claims, userDetails.getUsername());
     }
 
-    public String generateToken(String username) {
-        Map<String, Object> claims = new HashMap<>();
-        return createToken(claims, username);
-    }
+//    public String generateToken(String username) {
+//        Map<String, Object> claims = new HashMap<>();
+//        return createToken(claims, username);
+//    }
 
     private String createToken(Map<String, Object> claims, String subject) {
         Date now = new Date();
@@ -81,12 +81,12 @@ public class JwtUtil {
         return (username.equals(userDetails.getUsername()) && !isTokenExpired(token));
     }
 
-    public Boolean validateToken(String token) {
-        try {
-            extractAllClaims(token);
-            return !isTokenExpired(token);
-        } catch (Exception e) {
-            return false;
-        }
-    }
+//    public Boolean validateToken(String token) {
+//        try {
+//            extractAllClaims(token);
+//            return !isTokenExpired(token);
+//        } catch (Exception e) {
+//            return false;
+//        }
+//    }
 }

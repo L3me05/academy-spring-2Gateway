@@ -22,9 +22,9 @@ public class UserService {
         return userRepository.save(user);
     }
 
-    public Optional<User> findByUsername(String username) {
-        return userRepository.findByUsername(username);
-    }
+//    public Optional<User> findByUsername(String username) {
+//        return userRepository.findByUsername(username);
+//    }
 
     public boolean existsByUsername(String username) {
         return userRepository.findByUsername(username).isPresent();

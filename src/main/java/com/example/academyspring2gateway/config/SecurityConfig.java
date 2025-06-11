@@ -1,6 +1,5 @@
 package com.example.academyspring2gateway.config;
 
-import com.example.academyspring2gateway.filter.JwtAuthenticationFilter;
 import com.example.academyspring2gateway.service.CustomUserDetailsService;
 import com.example.academyspring2gateway.util.JwtUtil;
 import org.springframework.beans.factory.annotation.Autowired;
