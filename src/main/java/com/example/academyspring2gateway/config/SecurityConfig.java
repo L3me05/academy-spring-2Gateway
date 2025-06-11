@@ -2,6 +2,7 @@ package com.example.academyspring2gateway.config;
 
 import com.example.academyspring2gateway.service.CustomUserDetailsService;
 import com.example.academyspring2gateway.util.JwtUtil;
+import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -19,16 +20,14 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 
 @Configuration
 @EnableWebSecurity
+@AllArgsConstructor
 public class SecurityConfig {
 
-    @Autowired
-    private JwtUtil jwtUtil;
+    private final JwtUtil jwtUtil;
 
-    @Autowired
-    private CustomUserDetailsService userDetailsService;
+    private final CustomUserDetailsService userDetailsService;
 
-    @Autowired
-    private JwtAuthenticationFilter jwtAuthenticationFilter;
+    private final JwtAuthenticationFilter jwtAuthenticationFilter;
 
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
