@@ -4,6 +4,15 @@ server:
 spring:
   application:
     name: academy-spring-2Gateway
+  datasource:
+    url: jdbc:postgresql://localhost:5432/academy_elite_security
+    username: postgres
+    password: Lemuel05
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
   cloud:
     gateway:
       server:
@@ -21,7 +30,3 @@ spring:
               uri: http://localhost:8081
               predicates:
                 - Path=/corsi/**
-app:
-  security:
-    username: ${GATEWAY_USERNAME:user}
-    password: ${GATEWAY_PASSWORD:password}
