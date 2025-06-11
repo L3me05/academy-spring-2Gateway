@@ -14,20 +14,20 @@ public class JwtService {
     public String generateToken(UserDetails userDetails) {
         return jwtUtil.generateToken(userDetails);
     }
-
-    public String generateToken(String username) {
-        return jwtUtil.generateToken(username);
-    }
-
-    public String extractUsername(String token) {
-        return jwtUtil.extractUsername(token);
-    }
-
-    public Boolean validateToken(String token, UserDetails userDetails) {
-        return jwtUtil.validateToken(token, userDetails);
-    }
-
-    public Boolean validateToken(String token) {
-        return jwtUtil.validateToken(token);
-    }
+//
+//    public String generateToken(String username) {
+//        return jwtUtil.generateToken(username);
+//    }
+//
+//    public String extractUsername(String token) {
+//        return jwtUtil.extractUsername(token);
+//    }
+//
+//    public Boolean validateToken(String token, UserDetails userDetails) {
+//        return jwtUtil.validateToken(token, userDetails);
+//    }
+//
+//    public Boolean validateToken(String token) {
+//        return jwtUtil.validateToken(token);
+//    }
 }
