@@ -10,7 +10,7 @@
     </parent>
     <groupId>com.example</groupId>
     <artifactId>academy-spring-2Gateway</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <vermsion>0.0.1-SNAPSHOT</vermsion>
     <packaging>war</packaging>
     <name>academy-spring-2Gateway</name>
     <description>academy-spring-2Gateway</description>
